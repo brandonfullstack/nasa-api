@@ -7,7 +7,7 @@ export default class APOD {
                 const error = `${response.status} ${response.statusText}`;
                 throw new Error(error)
             }
-            return response.json();
+            return await response.json();
         }
         catch(error) {
             return error;
